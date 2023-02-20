@@ -1,0 +1,30 @@
+html,
+body {
+  background-color: #2c3034;
+}
+
+h1 {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  color: #0d6efd;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-light {
+  background-color: #212529;
+  border: none;
+  color: white;
+  margin-top: 10px;
+}
+
+#skill {
+  background-color: #212529;
+  border: none;
+  color: gray;
+  padding-left: 10px;
+}
