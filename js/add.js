@@ -19,3 +19,17 @@ async function sendData() {
     cache: "default",
   })
 }
+
+// Click button <Add skill> ------------------------------------------
+document.getElementById("add_skill").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  sendData();
+  alert("Successfully added skill!");
+  window.location.href = "./index.html";
+});
+
+// Click button <View skills> ------------------------------------------
+document.getElementById("view_skills").addEventListener("click", () => {
+  window.location.href = "./index.html";
+});
