@@ -34,9 +34,33 @@ function handleData(data) {
     remBtn.textContent = "delete";
     //---------------------------------------------------------------
 
-    // append elements to table ---------------------------------------
+    // delete elements function -------------------------------------
+    async function elemDelFunc() {
+      await fetch(BASE_URL + "skill/" + element.id, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => {
+          alert("Successfully deleted the item!"), response.json();
+        })
+        .then(() => {
+          location.reload();
+        })
+        .catch((err) => console.log(err));
+    }
+    remBtn.addEventListener("click", elemDelFunc);
+    //----------------------------------------------------------------
+
+    // append elements to table --------------------------------------
     tableEl.append(tableRow);
     tableRow.append(tableHeader, tableData, remBtnContainer);
     remBtnContainer.append(remBtn);
   });
 }
+
+// Click button <Add a skill> -----------------------------------------
+document.getElementById("add_skill").addEventListener("click", () => {
+  window.location.href = "add.html";
+});
