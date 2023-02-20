@@ -12,6 +12,14 @@ fetch(BASE_URL + "skills")
   })
   .then((res) => res.json())
   .then((result) => {
-   console.log(result)
+    handleData(result);
   })
   .catch((err) => console.log(err));
+
+function handleData(data) {
+  // Loop result ---------------------------------------------------
+  data.forEach((element) => {
+    console.log(element);
+    console.log(element.id);
+  });
+}
